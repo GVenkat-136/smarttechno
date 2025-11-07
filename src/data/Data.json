@@ -1,0 +1,338 @@
+{
+  "company": {
+    "name": "TechSolutions Pro",
+    "tagline": "Innovative Technology Solutions",
+    "description": "Leading provider of cutting-edge technology services for businesses worldwide",
+    "founded": "2010",
+    "employees": "50+",
+    "headquarters": "Silicon Valley, CA"
+  },
+  "hero": {
+    "title": "Transform Your Business with Technology",
+    "subtitle": "We deliver innovative solutions in AI, Mobile Development, Web Development, Cloud Solutions, and Embedded Systems that drive growth and efficiency",
+    "ctaText": "Get Started",
+    "ctaSecondaryText": "Learn More",
+    "backgroundImage": "/images/hero-bg.jpg",
+    "features": [
+      "10+ Years Experience",
+      "500+ Projects Completed",
+      "24/7 Support"
+    ]
+  },
+  "services": [
+    {
+      "id": "ai",
+      "title": "Artificial Intelligence",
+      "description": "Advanced AI solutions for business automation, predictive analytics, and intelligent decision-making systems",
+      "icon": "CpuChipIcon",
+      "features": [
+        "Machine Learning Models",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Predictive Analytics",
+        "AI Chatbots"
+      ],
+      "technologies": [
+        "TensorFlow",
+        "PyTorch",
+        "OpenAI",
+        "Scikit-learn"
+      ]
+    },
+    {
+      "id": "mobile",
+      "title": "Mobile App Development",
+      "description": "Native and cross-platform mobile applications that deliver exceptional user experiences across all devices",
+      "icon": "DevicePhoneMobileIcon",
+      "features": [
+        "iOS Development",
+        "Android Development",
+        "React Native",
+        "Flutter Apps",
+        "App Store Optimization"
+      ],
+      "technologies": [
+        "React Native",
+        "Flutter",
+        "Swift",
+        "Kotlin"
+      ]
+    },
+    {
+      "id": "web",
+      "title": "Web Development",
+      "description": "Modern, responsive web applications built with cutting-edge technologies and best practices",
+      "icon": "GlobeAltIcon",
+      "features": [
+        "Frontend Development",
+        "Backend APIs",
+        "E-commerce Solutions",
+        "Progressive Web Apps",
+        "Performance Optimization"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "Next.js",
+        "TypeScript"
+      ]
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud Solutions",
+      "description": "Scalable cloud infrastructure and services that ensure reliability, security, and optimal performance",
+      "icon": "CloudIcon",
+      "features": [
+        "Cloud Migration",
+        "DevOps & CI/CD",
+        "Microservices Architecture",
+        "Container Orchestration",
+        "Cloud Security"
+      ],
+      "technologies": [
+        "AWS",
+        "Azure",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "id": "embedded",
+      "title": "Embedded Solutions",
+      "description": "Custom embedded systems and IoT solutions for industrial automation and smart device integration",
+      "icon": "CpuChipIcon",
+      "features": [
+        "IoT Development",
+        "Firmware Programming",
+        "Hardware Integration",
+        "Real-time Systems",
+        "Industrial Automation"
+      ],
+      "technologies": [
+        "C/C++",
+        "Arduino",
+        "Raspberry Pi",
+        "RTOS"
+      ]
+    }
+  ],
+  "about": {
+    "title": "About TechSolutions Pro",
+    "description": "With over a decade of experience in the technology industry, TechSolutions Pro has established itself as a trusted partner for businesses seeking innovative digital transformation solutions. Our team of expert developers, engineers, and consultants work collaboratively to deliver cutting-edge technology solutions that drive business growth and operational efficiency.",
+    "mission": "To empower businesses through innovative technology solutions that transform ideas into reality and drive sustainable growth.",
+    "vision": "To be the leading technology solutions provider, recognized for excellence, innovation, and client success worldwide.",
+    "stats": [
+      {
+        "label": "Projects Completed",
+        "value": "500+",
+        "icon": "CheckCircleIcon"
+      },
+      {
+        "label": "Happy Clients",
+        "value": "200+",
+        "icon": "FaceSmileIcon"
+      },
+      {
+        "label": "Team Members",
+        "value": "50+",
+        "icon": "UsersIcon"
+      },
+      {
+        "label": "Years Experience",
+        "value": "10+",
+        "icon": "CalendarIcon"
+      }
+    ],
+    "values": [
+      {
+        "title": "Innovation",
+        "description": "We embrace cutting-edge technologies and creative solutions"
+      },
+      {
+        "title": "Quality",
+        "description": "We deliver excellence in every project we undertake"
+      },
+      {
+        "title": "Collaboration",
+        "description": "We work closely with clients to achieve shared success"
+      },
+      {
+        "title": "Integrity",
+        "description": "We maintain the highest standards of professional ethics"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "company": "Tech Innovations Corp",
+      "role": "CTO",
+      "content": "TechSolutions Pro delivered an exceptional AI solution that transformed our business operations. Their expertise and professionalism exceeded our expectations.",
+      "rating": 5,
+      "avatar": "/images/testimonial1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Johnson",
+      "company": "Digital Dynamics",
+      "role": "CEO",
+      "content": "The mobile app they developed for us has been a game-changer. User engagement increased by 300% within the first month of launch.",
+      "rating": 5,
+      "avatar": "/images/testimonial2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Michael Chen",
+      "company": "CloudFirst Solutions",
+      "role": "VP of Engineering",
+      "content": "Their cloud migration services helped us reduce costs by 40% while improving performance. Highly recommended for any cloud transformation project.",
+      "rating": 5,
+      "avatar": "/images/testimonial3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Emily Rodriguez",
+      "company": "Smart Manufacturing Inc",
+      "role": "Operations Director",
+      "content": "The embedded IoT solution they built revolutionized our manufacturing process. Real-time monitoring and automation have significantly improved our efficiency.",
+      "rating": 5,
+      "avatar": "/images/testimonial4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "David Wilson",
+      "company": "E-Commerce Plus",
+      "role": "Founder",
+      "content": "Our new e-commerce platform built by TechSolutions Pro has tripled our online sales. The user experience is fantastic and the backend is rock solid.",
+      "rating": 5,
+      "avatar": "/images/testimonial5.jpg"
+    }
+  ],
+  "footer": {
+    "sections": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "text": "Artificial Intelligence",
+            "href": "#ai"
+          },
+          {
+            "text": "Mobile Development",
+            "href": "#mobile"
+          },
+          {
+            "text": "Web Development",
+            "href": "#web"
+          },
+          {
+            "text": "Cloud Solutions",
+            "href": "#cloud"
+          },
+          {
+            "text": "Embedded Solutions",
+            "href": "#embedded"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "text": "About Us",
+            "href": "#about"
+          },
+          {
+            "text": "Our Team",
+            "href": "#team"
+          },
+          {
+            "text": "Careers",
+            "href": "#careers"
+          },
+          {
+            "text": "News & Updates",
+            "href": "#news"
+          }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          {
+            "text": "Case Studies",
+            "href": "#case-studies"
+          },
+          {
+            "text": "Blog",
+            "href": "#blog"
+          },
+          {
+            "text": "Documentation",
+            "href": "#docs"
+          },
+          {
+            "text": "Support",
+            "href": "#support"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "text": "Privacy Policy",
+            "href": "#privacy"
+          },
+          {
+            "text": "Terms of Service",
+            "href": "#terms"
+          },
+          {
+            "text": "Cookie Policy",
+            "href": "#cookies"
+          },
+          {
+            "text": "GDPR Compliance",
+            "href": "#gdpr"
+          }
+        ]
+      }
+    ],
+    "social": [
+      {
+        "platform": "twitter",
+        "url": "https://twitter.com/techsolutionspro",
+        "icon": "twitter"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://linkedin.com/company/techsolutionspro",
+        "icon": "linkedin"
+      },
+      {
+        "platform": "github",
+        "url": "https://github.com/techsolutionspro",
+        "icon": "github"
+      },
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/techsolutionspro",
+        "icon": "facebook"
+      }
+    ],
+    "contact": {
+      "email": "contact@techsolutionspro.com",
+      "phone": "+1 (555) 123-4567",
+      "address": "123 Tech Street, Silicon Valley, CA 94000",
+      "hours": "Mon-Fri 9AM-6PM PST"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our newsletter for the latest tech insights and company updates",
+      "placeholder": "Enter your email address"
+    },
+    "copyright": "© 2024 TechSolutions Pro. All rights reserved."
+  }
+}
