@@ -4,16 +4,22 @@
   "description": "Modern React-based landing page for Technology Solutions Company",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack serve --mode development --open",
-    "build": "webpack --mode production",
-    "dev": "webpack serve --mode development"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "dev": "react-scripts start"
   },
-  "keywords": ["react", "landing-page", "webpack", "tailwind"],
+  "keywords": [
+    "react",
+    "landing-page",
+    "webpack",
+    "tailwind"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
     "@heroicons/react": "^2.0.18",
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.23.0",
@@ -32,5 +38,17 @@
   "devDependencies": {
     "style-loader": "^3.3.3",
     "webpack-dev-server": "^4.15.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
