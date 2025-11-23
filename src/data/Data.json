@@ -22,174 +22,328 @@
   "services": [
     {
       "id": "ai",
-      "title": "Artificial Intelligence",
-      "description": "Advanced AI solutions for business automation, predictive analytics, and intelligent decision-making systems",
+      "title": "AI & Machine Learning",
+      "description": "Transform your business with intelligent automation, predictive analytics, and cutting-edge AI models that learn and adapt to your unique challenges",
       "icon": "CpuChipIcon",
       "features": [
-        "Machine Learning Models",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-        "AI Chatbots"
+        "Custom ML model development with 95%+ accuracy rates",
+        "Natural Language Processing for sentiment analysis and chatbots",
+        "Computer Vision for object detection and image recognition",
+        "Predictive analytics to forecast trends and optimize decisions",
+        "AI-powered automation reducing manual tasks by up to 70%"
       ],
       "technologies": [
         "TensorFlow",
         "PyTorch",
-        "OpenAI",
-        "Scikit-learn"
+        "OpenAI GPT",
+        "Scikit-learn",
+        "Hugging Face"
       ]
     },
     {
       "id": "mobile",
-      "title": "Mobile App Development",
-      "description": "Native and cross-platform mobile applications that deliver exceptional user experiences across all devices",
+      "title": "Mobile Excellence",
+      "description": "Build stunning native and cross-platform mobile apps that users love, with seamless performance across iOS and Android devices",
       "icon": "DevicePhoneMobileIcon",
       "features": [
-        "iOS Development",
-        "Android Development",
-        "React Native",
-        "Flutter Apps",
-        "App Store Optimization"
+        "Native iOS and Android development for maximum performance",
+        "Cross-platform solutions with React Native and Flutter",
+        "Intuitive UI/UX design that drives 40%+ user engagement",
+        "Offline-first architecture for uninterrupted experiences",
+        "App Store optimization achieving top 10 rankings"
       ],
       "technologies": [
         "React Native",
         "Flutter",
         "Swift",
-        "Kotlin"
+        "Kotlin",
+        "Firebase"
       ]
     },
     {
       "id": "web",
-      "title": "Web Development",
-      "description": "Modern, responsive web applications built with cutting-edge technologies and best practices",
+      "title": "Web Innovation",
+      "description": "Create lightning-fast, scalable web applications with modern frameworks that deliver exceptional user experiences and drive conversions",
       "icon": "GlobeAltIcon",
       "features": [
-        "Frontend Development",
-        "Backend APIs",
-        "E-commerce Solutions",
-        "Progressive Web Apps",
-        "Performance Optimization"
+        "Server-side rendering for 3x faster page loads",
+        "Progressive Web Apps with offline capabilities",
+        "E-commerce platforms processing millions in transactions",
+        "Real-time features with WebSockets and live updates",
+        "SEO optimization achieving 200%+ organic traffic growth"
       ],
       "technologies": [
         "React",
-        "Node.js",
         "Next.js",
-        "TypeScript"
+        "Node.js",
+        "TypeScript",
+        "GraphQL"
       ]
     },
     {
       "id": "cloud",
-      "title": "Cloud Solutions",
-      "description": "Scalable cloud infrastructure and services that ensure reliability, security, and optimal performance",
+      "title": "Cloud Infrastructure",
+      "description": "Scale effortlessly with enterprise-grade cloud solutions that ensure 99.99% uptime, robust security, and cost optimization",
       "icon": "CloudIcon",
       "features": [
-        "Cloud Migration",
-        "DevOps & CI/CD",
-        "Microservices Architecture",
-        "Container Orchestration",
-        "Cloud Security"
+        "Zero-downtime cloud migration with automated rollback",
+        "Kubernetes orchestration for auto-scaling workloads",
+        "CI/CD pipelines reducing deployment time by 80%",
+        "Multi-region architecture for global performance",
+        "Infrastructure as Code for consistent, repeatable deployments"
       ],
       "technologies": [
         "AWS",
         "Azure",
+        "Google Cloud",
         "Docker",
-        "Kubernetes"
+        "Terraform"
       ]
     },
     {
       "id": "embedded",
-      "title": "Embedded Solutions",
-      "description": "Custom embedded systems and IoT solutions for industrial automation and smart device integration",
+      "title": "IoT & Embedded Systems",
+      "description": "Connect the physical and digital worlds with smart IoT solutions and embedded systems that power the next generation of devices",
       "icon": "CpuChipIcon",
       "features": [
-        "IoT Development",
-        "Firmware Programming",
-        "Hardware Integration",
-        "Real-time Systems",
-        "Industrial Automation"
+        "Industrial IoT solutions monitoring 10,000+ devices in real-time",
+        "Custom firmware development for optimal hardware performance",
+        "Edge computing reducing latency to under 10ms",
+        "Secure device-to-cloud communication with end-to-end encryption",
+        "Predictive maintenance reducing equipment downtime by 60%"
       ],
       "technologies": [
         "C/C++",
+        "MQTT",
         "Arduino",
         "Raspberry Pi",
-        "RTOS"
+        "FreeRTOS"
       ]
     }
   ],
   "about": {
     "title": "About TechSolutions Pro",
-    "description": "With over a decade of experience in the technology industry, TechSolutions Pro has established itself as a trusted partner for businesses seeking innovative digital transformation solutions. Our team of expert developers, engineers, and consultants work collaboratively to deliver cutting-edge technology solutions that drive business growth and operational efficiency.",
-    "mission": "To empower businesses through innovative technology solutions that transform ideas into reality and drive sustainable growth.",
-    "vision": "To be the leading technology solutions provider, recognized for excellence, innovation, and client success worldwide.",
+    "description": "For over 15 years, TechSolutions Pro has been at the forefront of digital innovation, partnering with forward-thinking businesses to transform their technological landscape. Our multidisciplinary team of 50+ expert developers, AI specialists, cloud architects, and UX designers brings together decades of combined experience to solve complex challenges.",
+    "extendedDescription": "We don't just build software—we architect digital ecosystems that scale, adapt, and evolve with your business. From Fortune 500 enterprises to ambitious startups, we've delivered 850+ successful projects across 40+ industries, maintaining a 98% client retention rate.",
+    "mission": "To empower businesses through innovative technology solutions that transform ideas into reality, accelerate growth, and create lasting competitive advantages in an ever-evolving digital landscape.",
+    "vision": "To be the world's most trusted technology partner, recognized globally for pioneering innovation, exceptional delivery, and transformative impact on businesses and communities.",
+    "highlights": [
+      {
+        "title": "Global Reach",
+        "value": "40+ Countries Served"
+      },
+      {
+        "title": "Industry Leader",
+        "value": "Top 1% Tech Firms"
+      },
+      {
+        "title": "Client Success",
+        "value": "98% Retention Rate"
+      },
+      {
+        "title": "Innovation Focus",
+        "value": "R&D Investment 20%"
+      }
+    ],
     "stats": [
       {
-        "label": "Projects Completed",
-        "value": "500+",
+        "label": "Projects Delivered",
+        "value": "850+",
+        "description": "Successfully completed",
         "icon": "CheckCircleIcon"
       },
       {
-        "label": "Happy Clients",
-        "value": "200+",
+        "label": "Enterprise Clients",
+        "value": "300+",
+        "description": "Worldwide partnerships",
         "icon": "FaceSmileIcon"
       },
       {
-        "label": "Team Members",
+        "label": "Expert Team",
         "value": "50+",
+        "description": "Certified professionals",
         "icon": "UsersIcon"
       },
       {
-        "label": "Years Experience",
-        "value": "10+",
+        "label": "Years Excellence",
+        "value": "15+",
+        "description": "Industry experience",
         "icon": "CalendarIcon"
       }
     ],
     "values": [
       {
-        "title": "Innovation",
-        "description": "We embrace cutting-edge technologies and creative solutions"
+        "title": "Innovation First",
+        "description": "We pioneer cutting-edge solutions using emerging technologies like AI, blockchain, and quantum computing to keep you ahead of the curve"
       },
       {
-        "title": "Quality",
-        "description": "We deliver excellence in every project we undertake"
+        "title": "Quality Obsessed",
+        "description": "Every line of code, every design decision undergoes rigorous testing and review to ensure world-class standards and zero-compromise excellence"
       },
       {
-        "title": "Collaboration",
-        "description": "We work closely with clients to achieve shared success"
+        "title": "Partnership Driven",
+        "description": "Your success is our success. We work as an extension of your team, fostering transparent collaboration and shared accountability"
       },
       {
-        "title": "Integrity",
-        "description": "We maintain the highest standards of professional ethics"
+        "title": "Ethical Foundation",
+        "description": "We uphold the highest standards of integrity, security, and privacy, ensuring responsible technology that benefits society"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "ISO 27001",
+        "year": "2024"
+      },
+      {
+        "name": "AWS Partner",
+        "year": "2023"
+      },
+      {
+        "name": "SOC 2 Type II",
+        "year": "2024"
+      },
+      {
+        "name": "Best Tech Firm",
+        "year": "2024"
       }
     ]
   },
   "team": [
     {
       "id": 1,
-      "name": "John Smith",
+      "name": "Alexander Hunt",
       "role": "CEO & Founder",
       "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80",
-      "bio": "Visionary leader with 15+ years in tech industry"
+      "bio": "Serial entrepreneur and tech visionary who founded TechSolutions Pro after leading digital transformations at Fortune 500 companies",
+      "expertise": ["Strategy", "Leadership", "Innovation"],
+      "stats": {
+        "experience": "20+",
+        "projects": "500+"
+      },
+      "email": "alex.hunt@techsolutions.com",
+      "social": {
+        "linkedin": "https://linkedin.com/in/alexhunt",
+        "twitter": "https://twitter.com/alexhunt"
+      }
     },
     {
       "id": 2,
-      "name": "Sarah Johnson",
-      "role": "CTO",
+      "name": "Dr. Sarah Chen",
+      "role": "Chief Technology Officer",
       "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80",
-      "bio": "Expert in AI and machine learning solutions"
+      "bio": "PhD in Computer Science from MIT, pioneering AI research with 50+ published papers and 3 patents in machine learning",
+      "expertise": ["AI/ML", "Research", "Architecture"],
+      "stats": {
+        "experience": "15+",
+        "projects": "300+"
+      },
+      "email": "sarah.chen@techsolutions.com",
+      "social": {
+        "linkedin": "https://linkedin.com/in/sarahchen",
+        "twitter": "https://twitter.com/drsarahchen"
+      }
     },
     {
       "id": 3,
-      "name": "Michael Chen",
-      "role": "Lead Developer",
+      "name": "Marcus Rodriguez",
+      "role": "VP of Engineering",
       "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
-      "bio": "Full-stack developer specializing in cloud architecture"
+      "bio": "Former Google engineer specializing in scalable cloud infrastructure and leading teams of 50+ developers across global projects",
+      "expertise": ["Cloud", "DevOps", "Scalability"],
+      "stats": {
+        "experience": "12+",
+        "projects": "400+"
+      },
+      "email": "marcus.rodriguez@techsolutions.com",
+      "social": {
+        "linkedin": "https://linkedin.com/in/marcusrodriguez",
+        "twitter": "https://twitter.com/marcusdev"
+      }
     },
     {
       "id": 4,
-      "name": "Emily Davis",
-      "role": "Design Director",
+      "name": "Emma Williams",
+      "role": "Creative Director",
       "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80",
-      "bio": "Creative designer with passion for user experience"
+      "bio": "Award-winning designer with Red Dot and Webby awards, creating user experiences that drive 300%+ engagement increases",
+      "expertise": ["UI/UX", "Branding", "Product Design"],
+      "stats": {
+        "experience": "10+",
+        "projects": "250+"
+      },
+      "email": "emma.williams@techsolutions.com",
+      "social": {
+        "linkedin": "https://linkedin.com/in/emmawilliams",
+        "twitter": "https://twitter.com/emmadesigns"
+      }
+    },
+    {
+      "id": 5,
+      "name": "David Park",
+      "role": "Head of Mobile",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80",
+      "bio": "Mobile architect with apps featured by Apple and Google, reaching 10M+ downloads and maintaining 4.8+ star ratings",
+      "expertise": ["iOS", "Android", "React Native"],
+      "stats": {
+        "experience": "11+",
+        "projects": "180+"
+      },
+      "email": "david.park@techsolutions.com",
+      "social": {
+        "linkedin": "https://linkedin.com/in/davidpark",
+        "twitter": "https://twitter.com/davidmobile"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Priya Sharma",
+      "role": "AI Research Lead",
+      "image": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&auto=format&fit=crop&q=80",
+      "bio": "Machine learning expert from Stanford, developing cutting-edge NLP and computer vision models for enterprise clients",
+      "expertise": ["Deep Learning", "NLP", "Computer Vision"],
+      "stats": {
+        "experience": "8+",
+        "projects": "120+"
+      },
+      "email": "priya.sharma@techsolutions.com",
+      "social": {
+        "linkedin": "https://linkedin.com/in/priyasharma",
+        "twitter": "https://twitter.com/priyaai"
+      }
+    },
+    {
+      "id": 7,
+      "name": "James Mitchell",
+      "role": "Security Architect",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=80",
+      "bio": "Cybersecurity specialist with CISSP and CEH certifications, protecting enterprise systems from evolving threats",
+      "expertise": ["Security", "Compliance", "Penetration Testing"],
+      "stats": {
+        "experience": "14+",
+        "projects": "200+"
+      },
+      "email": "james.mitchell@techsolutions.com",
+      "social": {
+        "linkedin": "https://linkedin.com/in/jamesmitchell",
+        "twitter": "https://twitter.com/jamessec"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Lisa Anderson",
+      "role": "Product Strategy",
+      "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&auto=format&fit=crop&q=80",
+      "bio": "Product visionary who has launched 30+ successful products, generating $100M+ in revenue for clients worldwide",
+      "expertise": ["Product Management", "Strategy", "Analytics"],
+      "stats": {
+        "experience": "13+",
+        "projects": "220+"
+      },
+      "email": "lisa.anderson@techsolutions.com",
+      "social": {
+        "linkedin": "https://linkedin.com/in/lisaanderson",
+        "twitter": "https://twitter.com/lisaproduct"
+      }
     }
   ],
   "testimonials": [

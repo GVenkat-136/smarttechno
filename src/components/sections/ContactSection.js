@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { 
   MapPinIcon, 
   EnvelopeIcon, 
   PhoneIcon,
-  PaperAirplaneIcon 
+  PaperAirplaneIcon,
+  SparklesIcon,
+  ClockIcon,
+  ChatBubbleLeftRightIcon,
+  CheckCircleIcon
 } from '@heroicons/react/24/outline';
 import { useScrollAnimation } from '../../utils/scrollAnimations';
 
 const ContactSection = () => {
   const headerAnimation = useScrollAnimation({ threshold: 0.2 });
+  const contactInfoAnimation = useScrollAnimation({ threshold: 0.2 });
+  const formAnimation = useScrollAnimation({ threshold: 0.2 });
+  const benefitsAnimation = useScrollAnimation({ threshold: 0.2 });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,9 +33,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form submitted:', formData);
-    // Reset form
     setFormData({
       name: '',
       email: '',
@@ -39,128 +44,151 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-black dark:bg-black text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `linear-gradient(rgba(220, 38, 38, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(220, 38, 38, 0.3) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-        
-        {/* Glowing orbs */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+    <section id="contact" className="py-24 bg-navy relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 20px, #FFC107 20px, #FFC107 22px)`
+        }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <div 
           ref={headerAnimation.ref}
-          className={`text-center mb-20 transition-all duration-600 ${
+          className={`mb-20 transition-all duration-600 ${
             headerAnimation.isVisible 
               ? 'opacity-100 transform translate-y-0' 
               : 'opacity-0 transform translate-y-8'
           }`}
         >
-          <div className="inline-block mb-4">
-            <span className="text-primary font-bold text-sm uppercase tracking-wider px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-              Get In Touch
-            </span>
+          <div className="text-center mb-12">
+            <div className="inline-block mb-6">
+              <span className="inline-flex items-center gap-2 text-cream font-bold text-xs uppercase tracking-widest px-6 py-3 border-2 border-cream hover:bg-cream hover:text-navy transition-all duration-300 cursor-default group">
+                <SparklesIcon className="w-4 h-4 text-gold group-hover:rotate-180 transition-transform duration-500" />
+                Start Your Project
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-7xl font-black text-cream mb-6 leading-tight">
+              Let's Build Something <span className="text-gold">Amazing</span>
+            </h2>
+            <p className="text-lg text-cream/80 max-w-3xl mx-auto leading-relaxed">
+              Have a project in mind? Our team is ready to turn your vision into reality. Get in touch and let's start the conversation.
+            </p>
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
-            <span className="text-primary">CONTACT US</span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Let's discuss how we can help transform your business
-          </p>
+          
+          {/* Quick Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="text-center group cursor-default">
+              <div className="text-3xl font-black text-gold group-hover:scale-110 transition-transform duration-300">&lt; 1h</div>
+              <div className="text-xs text-cream/70 uppercase tracking-wider">Response Time</div>
+            </div>
+            <div className="text-center group cursor-default">
+              <div className="text-3xl font-black text-orange group-hover:scale-110 transition-transform duration-300">24/7</div>
+              <div className="text-xs text-cream/70 uppercase tracking-wider">Support</div>
+            </div>
+            <div className="text-center group cursor-default">
+              <div className="text-3xl font-black text-gold group-hover:scale-110 transition-transform duration-300">Free</div>
+              <div className="text-xs text-cream/70 uppercase tracking-wider">Consultation</div>
+            </div>
+            <div className="text-center group cursor-default">
+              <div className="text-3xl font-black text-orange group-hover:scale-110 transition-transform duration-300">100%</div>
+              <div className="text-xs text-cream/70 uppercase tracking-wider">Confidential</div>
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Contact Information - 2 columns */}
-          <div className="lg:col-span-2 space-y-6">
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4">Let's Talk</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-              </p>
-            </div>
-
+        {/* Contact Information - Horizontal List */}
+        <div 
+          ref={contactInfoAnimation.ref}
+          className={`mb-16 transition-all duration-800 ${
+            contactInfoAnimation.isVisible 
+              ? 'opacity-100 transform translate-y-0' 
+              : 'opacity-0 transform translate-y-12'
+          }`}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Location */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-primary/5 rounded-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300"></div>
-              <div className="relative flex items-start space-x-4 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-primary/50 transition-all duration-300">
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center border border-primary/30 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                    <MapPinIcon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
-                  </div>
+            <div className="group relative border-t-4 border-gold pt-6 hover:bg-cream/5 transition-all duration-500">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-14 h-14 bg-gold flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <MapPinIcon className="w-7 h-7 text-navy" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-2">Location</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                <div className="flex-1">
+                  <h3 className="text-sm font-black mb-2 text-cream uppercase tracking-wider">Visit Us</h3>
+                  <p className="text-sm text-cream/80 leading-relaxed">
                     Smartchip Technologies F.No:r4, Second Floor, Daivasadan Apartments, Malkajgiri, Hyderabad
                   </p>
                 </div>
               </div>
+              <div className="h-1 bg-gold w-0 group-hover:w-full transition-all duration-700"></div>
             </div>
 
             {/* Email */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-primary/5 rounded-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300"></div>
-              <div className="relative flex items-start space-x-4 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-primary/50 transition-all duration-300">
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center border border-primary/30 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                    <EnvelopeIcon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
-                  </div>
+            <div className="group relative border-t-4 border-orange pt-6 hover:bg-cream/5 transition-all duration-500">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-14 h-14 bg-orange flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <EnvelopeIcon className="w-7 h-7 text-cream" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-2">Email</h3>
+                <div className="flex-1">
+                  <h3 className="text-sm font-black mb-2 text-cream uppercase tracking-wider">Email Us</h3>
                   <a 
                     href="mailto:info@smartchiptechno.com"
-                    className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm"
+                    className="text-sm text-cream/80 hover:text-gold transition-colors duration-300 font-semibold break-all"
                   >
                     info@smartchiptechno.com
                   </a>
                 </div>
               </div>
+              <div className="h-1 bg-orange w-0 group-hover:w-full transition-all duration-700"></div>
             </div>
 
             {/* Phone */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-primary/5 rounded-2xl transform scale-95 group-hover:scale-100 transition-transform duration-300"></div>
-              <div className="relative flex items-start space-x-4 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-primary/50 transition-all duration-300">
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center border border-primary/30 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                    <PhoneIcon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
-                  </div>
+            <div className="group relative border-t-4 border-burgundy pt-6 hover:bg-cream/5 transition-all duration-500">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-14 h-14 bg-burgundy flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <PhoneIcon className="w-7 h-7 text-cream" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-2">Call</h3>
+                <div className="flex-1">
+                  <h3 className="text-sm font-black mb-2 text-cream uppercase tracking-wider">Call Us</h3>
                   <a 
                     href="tel:+919046608123"
-                    className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm"
+                    className="text-sm text-cream/80 hover:text-gold transition-colors duration-300 font-semibold"
                   >
-                    (+91)4046608123
+                    (+91) 4046608123
                   </a>
                 </div>
               </div>
+              <div className="h-1 bg-burgundy w-0 group-hover:w-full transition-all duration-700"></div>
             </div>
           </div>
+        </div>
 
-          {/* Contact Form - 3 columns */}
-          <div className="lg:col-span-3">
+        {/* Contact Form - Full Width */}
+        <div 
+          ref={formAnimation.ref}
+          className={`max-w-5xl mx-auto transition-all duration-800 ${
+            formAnimation.isVisible 
+              ? 'opacity-100 transform translate-y-0' 
+              : 'opacity-0 transform translate-y-12'
+          }`}
+        >
             <div className="relative">
-              {/* Decorative corner */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+              {/* Decorative Frame */}
+              <div className="absolute -top-6 -left-6 w-full h-full border-4 border-gold"></div>
+              <div className="absolute -bottom-6 -right-6 w-full h-full border-4 border-orange"></div>
               
-              <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-10 border border-white/10 shadow-2xl">
+              <div className="relative bg-cream p-8 md:p-12">
+                <div className="mb-8">
+                  <h3 className="text-3xl font-black text-navy mb-2">Send Us a <span className="text-gold">Message</span></h3>
+                  <p className="text-navy/70">Fill out the form below and we'll get back to you within 24 hours</p>
+                </div>
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name */}
-                  <div className="group">
-                    <label className="block text-sm font-semibold mb-2 text-gray-300 group-focus-within:text-primary transition-colors duration-200">
-                      Your Name *
+                  <div>
+                    <label className="block text-xs font-black mb-2 text-navy uppercase tracking-wider">
+                      Full Name *
                     </label>
                     <input
                       type="text"
@@ -169,15 +197,15 @@ const ContactSection = () => {
                       onChange={handleChange}
                       placeholder="John Doe"
                       required
-                      className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 hover:bg-white/10"
+                      className="w-full px-4 py-3 bg-cream-light border-2 border-navy text-navy text-sm placeholder-navy focus:outline-none focus:border-gold transition-all duration-300"
                     />
                   </div>
 
                   {/* Email and Phone */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="group">
-                      <label className="block text-sm font-semibold mb-2 text-gray-300 group-focus-within:text-primary transition-colors duration-200">
-                        Your Email *
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-black mb-2 text-navy uppercase tracking-wider">
+                        Email Address *
                       </label>
                       <input
                         type="email"
@@ -186,11 +214,11 @@ const ContactSection = () => {
                         onChange={handleChange}
                         placeholder="john@example.com"
                         required
-                        className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 hover:bg-white/10"
+                        className="w-full px-4 py-3 bg-cream-light border-2 border-navy text-navy text-sm placeholder-navy focus:outline-none focus:border-gold transition-all duration-300"
                       />
                     </div>
-                    <div className="group">
-                      <label className="block text-sm font-semibold mb-2 text-gray-300 group-focus-within:text-primary transition-colors duration-200">
+                    <div>
+                      <label className="block text-xs font-black mb-2 text-navy uppercase tracking-wider">
                         Phone Number
                       </label>
                       <input
@@ -199,14 +227,14 @@ const ContactSection = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+91 1234567890"
-                        className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 hover:bg-white/10"
+                        className="w-full px-4 py-3 bg-cream-light border-2 border-navy text-navy text-sm placeholder-navy focus:outline-none focus:border-gold transition-all duration-300"
                       />
                     </div>
                   </div>
 
                   {/* Subject */}
-                  <div className="group">
-                    <label className="block text-sm font-semibold mb-2 text-gray-300 group-focus-within:text-primary transition-colors duration-200">
+                  <div>
+                    <label className="block text-xs font-black mb-2 text-navy uppercase tracking-wider">
                       Subject *
                     </label>
                     <input
@@ -214,16 +242,16 @@ const ContactSection = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      placeholder="How can we help you?"
+                      placeholder="Project Inquiry"
                       required
-                      className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 hover:bg-white/10"
+                      className="w-full px-4 py-3 bg-cream-light border-2 border-navy text-navy text-sm placeholder-navy focus:outline-none focus:border-gold transition-all duration-300"
                     />
                   </div>
 
                   {/* Message */}
-                  <div className="group">
-                    <label className="block text-sm font-semibold mb-2 text-gray-300 group-focus-within:text-primary transition-colors duration-200">
-                      Message *
+                  <div>
+                    <label className="block text-xs font-black mb-2 text-navy uppercase tracking-wider">
+                      Your Message *
                     </label>
                     <textarea
                       name="message"
@@ -232,26 +260,83 @@ const ContactSection = () => {
                       placeholder="Tell us about your project..."
                       required
                       rows="5"
-                      className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none hover:bg-white/10"
+                      className="w-full px-4 py-3 bg-cream-light border-2 border-navy text-navy text-sm placeholder-navy focus:outline-none focus:border-gold transition-all duration-300 resize-none"
                     ></textarea>
                   </div>
 
                   {/* Submit Button */}
-                  <div>
+                  <div className="flex justify-end">
                     <button
                       type="submit"
-                      className="group relative w-full md:w-auto px-10 py-4 bg-primary text-white rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-primary/50"
+                      className="group px-10 py-4 bg-orange text-cream font-bold uppercase tracking-wider transition-all duration-300 hover:bg-gold flex items-center gap-2"
                     >
-                      <span className="relative z-10 flex items-center justify-center gap-2">
-                        Send Message
-                        <PaperAirplaneIcon className="w-5 h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                      </span>
-                      <div className="absolute inset-0 bg-primary-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                      Send Message
+                      <PaperAirplaneIcon className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </button>
                   </div>
                 </form>
               </div>
             </div>
+        </div>
+
+        {/* Why Choose Us Section - Horizontal List */}
+        <div 
+          ref={benefitsAnimation.ref}
+          className={`mt-24 pt-16 border-t-2 border-cream/20 transition-all duration-800 ${
+            benefitsAnimation.isVisible 
+              ? 'opacity-100 transform translate-y-0' 
+              : 'opacity-0 transform translate-y-12'
+          }`}
+        >
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-5xl font-black text-cream mb-4">
+              Why Partner With <span className="text-gold">Us?</span>
+            </h3>
+            <p className="text-lg text-cream/70 max-w-2xl mx-auto">
+              Join 300+ companies that trust us with their digital transformation
+            </p>
+          </div>
+          
+          <div className="space-y-0">
+            {[
+              { icon: ClockIcon, color: 'gold', title: 'Fast Turnaround', desc: 'Quick response and efficient project delivery with agile methodologies' },
+              { icon: ChatBubbleLeftRightIcon, color: 'orange', title: 'Expert Guidance', desc: '15+ years of industry experience with certified professionals at your service' },
+              { icon: CheckCircleIcon, color: 'burgundy', title: 'Proven Results', desc: '850+ successful projects delivered worldwide with 98% client satisfaction' },
+              { icon: SparklesIcon, color: 'gold', title: 'Innovation First', desc: 'Cutting-edge solutions using latest technologies and best practices' }
+            ].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div 
+                  key={index}
+                  className="group relative border-t-2 border-cream/10 py-8 hover:bg-cream/5 transition-all duration-500"
+                >
+                  <div className="flex items-center gap-8">
+                    {/* Number */}
+                    <div className="hidden md:block text-6xl font-black text-cream/10 group-hover:text-cream/20 transition-colors duration-500 w-20">
+                      0{index + 1}
+                    </div>
+                    
+                    {/* Icon */}
+                    <div className={`w-16 h-16 bg-${item.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className="w-8 h-8 text-navy" />
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-black text-cream mb-2 group-hover:text-gold transition-colors duration-300">
+                        {item.title}
+                      </h4>
+                      <p className="text-cream/70 leading-relaxed max-w-2xl">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Hover Line */}
+                  <div className={`absolute bottom-0 left-0 h-1 bg-${item.color} w-0 group-hover:w-full transition-all duration-700`}></div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

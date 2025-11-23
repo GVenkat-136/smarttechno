@@ -1,5 +1,11 @@
-import React from 'react';
 import { useScrollAnimation } from '../../utils/scrollAnimations';
+import { 
+  SparklesIcon, 
+  EnvelopeIcon, 
+  BriefcaseIcon,
+  AcademicCapIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
 
 const TeamSection = ({ teamData }) => {
   const headerAnimation = useScrollAnimation({ threshold: 0.2 });
@@ -39,102 +45,228 @@ const TeamSection = ({ teamData }) => {
   const team = teamData || defaultTeam;
 
   return (
-    <section id="team" className="py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(220, 38, 38, 0.1) 35px, rgba(220, 38, 38, 0.1) 70px)`
-        }}></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <section id="team" className="py-32 bg-cream-light relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <div 
           ref={headerAnimation.ref}
-          className={`text-center mb-20 transition-all duration-600 ${
+          className={`text-center mb-24 transition-all duration-600 ${
             headerAnimation.isVisible 
               ? 'opacity-100 transform translate-y-0' 
               : 'opacity-0 transform translate-y-8'
           }`}
         >
-          <div className="inline-block mb-4">
-            <span className="text-primary font-bold text-sm uppercase tracking-wider px-4 py-2 bg-primary/10 rounded-full">
-              Our Team
+          <div className="inline-block mb-6">
+            <span className="inline-flex items-center gap-2 text-navy font-bold text-xs uppercase tracking-widest px-6 py-3 border-2 border-navy hover:bg-navy hover:text-cream transition-all duration-300 cursor-default group">
+              <SparklesIcon className="w-4 h-4 text-gold group-hover:rotate-180 transition-transform duration-500" />
+              Leadership Team
             </span>
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 dark:text-white mb-6">
-            Meet The <span className="text-primary">Experts</span>
+          <h2 className="text-4xl md:text-7xl font-black text-navy mb-6 leading-tight">
+            Meet the <span className="text-gold">Visionaries</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Talented professionals dedicated to delivering exceptional results
+          <p className="text-lg text-navy/70 max-w-3xl mx-auto leading-relaxed">
+            World-class experts driving innovation and delivering transformative solutions for global enterprises
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, index) => (
-            <div 
-              key={member.id}
-              className="group relative"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Card */}
-              <div className="relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
-                {/* Red accent bar */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                
-                {/* Image Container */}
-                <div className="relative overflow-hidden aspect-square">
-                  <img 
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                  />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                  
-                  {/* Floating role badge */}
-                  <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide shadow-lg transform translate-x-20 group-hover:translate-x-0 transition-transform duration-500">
-                    {member.role.split(' ')[0]}
+        {/* Team List - Horizontal Layout */}
+        <div className="space-y-0 mb-20">
+          {team.map((member, index) => {
+            const memberAnimation = useScrollAnimation({ threshold: 0.2 });
+            const colors = [
+              { accent: 'bg-navy', border: 'border-navy', text: 'text-navy', line: 'bg-gold' },
+              { accent: 'bg-gold', border: 'border-gold', text: 'text-gold', line: 'bg-orange' },
+              { accent: 'bg-orange', border: 'border-orange', text: 'text-orange', line: 'bg-burgundy' },
+              { accent: 'bg-burgundy', border: 'border-burgundy', text: 'text-burgundy', line: 'bg-navy' }
+            ];
+            const color = colors[index % colors.length];
+            const isEven = index % 2 === 0;
+            
+            return (
+              <div 
+                key={member.id}
+                ref={memberAnimation.ref}
+                className={`group relative border-t-2 border-navy py-12 transition-all duration-800 hover:bg-cream ${
+                  memberAnimation.isVisible 
+                    ? 'opacity-100 transform translate-y-0' 
+                    : 'opacity-0 transform translate-y-12'
+                }`}
+              >
+                <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`}>
+                  {/* Number */}
+                  <div className="lg:col-span-1 hidden lg:block">
+                    <div className={`text-7xl font-black ${color.text} opacity-10 group-hover:opacity-30 transition-opacity duration-500`}>
+                      0{index + 1}
+                    </div>
+                  </div>
+
+                  {/* Image */}
+                  <div className={`lg:col-span-4 ${isEven ? 'lg:order-2' : 'lg:order-3'}`}>
+                    <div className="relative group/img">
+                      {/* Decorative Frame */}
+                      <div className={`absolute -top-4 -left-4 w-full h-full ${color.border} border-4 transition-all duration-500 group-hover:-top-6 group-hover:-left-6`}></div>
+                      
+                      <div className="relative h-80 overflow-hidden">
+                        <img 
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        
+                        {/* Gradient Overlay */}
+                        <div className={`absolute inset-0 ${color.accent} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
+                        
+                        {/* Stats Overlay */}
+                        {member.stats && (
+                          <div className="absolute bottom-0 left-0 right-0 bg-navy/90 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div className="grid grid-cols-2 gap-4 text-center">
+                              <div>
+                                <div className="text-2xl font-black text-gold">{member.stats.experience}</div>
+                                <div className="text-xs text-cream uppercase">Years</div>
+                              </div>
+                              <div>
+                                <div className="text-2xl font-black text-orange">{member.stats.projects}</div>
+                                <div className="text-xs text-cream uppercase">Projects</div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className={`lg:col-span-7 ${isEven ? 'lg:order-3' : 'lg:order-2'}`}>
+                    {/* Role Badge */}
+                    <div className="inline-block mb-4">
+                      <span className={`text-xs font-bold ${color.text} uppercase tracking-widest px-4 py-2 border-2 ${color.border}`}>
+                        {member.role}
+                      </span>
+                    </div>
+                    
+                    {/* Name */}
+                    <h3 className="text-3xl md:text-4xl font-black text-navy mb-4 group-hover:text-gold transition-colors duration-300">
+                      {member.name}
+                    </h3>
+                    
+                    {/* Bio */}
+                    <p className="text-base text-navy/80 leading-relaxed mb-6 max-w-2xl">
+                      {member.bio}
+                    </p>
+                    
+                    {/* Expertise Tags */}
+                    {member.expertise && (
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {member.expertise.map((skill, idx) => (
+                          <span key={idx} className="text-sm px-4 py-2 bg-navy/5 border border-navy/20 text-navy font-semibold">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    
+                    {/* Social Links */}
+                    <div className="flex items-center gap-3">
+                      {member.email && (
+                        <a 
+                          href={`mailto:${member.email}`} 
+                          className={`w-10 h-10 border-2 ${color.border} flex items-center justify-center hover:${color.accent} hover:border-transparent transition-all duration-300 group/social`}
+                        >
+                          <EnvelopeIcon className={`w-5 h-5 ${color.text} group-hover/social:text-cream transition-colors duration-300`} />
+                        </a>
+                      )}
+                      {member.social?.linkedin && (
+                        <a 
+                          href={member.social.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`w-10 h-10 border-2 ${color.border} flex items-center justify-center hover:${color.accent} hover:border-transparent transition-all duration-300 group/social`}
+                        >
+                          <span className={`text-xs font-bold ${color.text} group-hover/social:text-cream transition-colors duration-300`}>in</span>
+                        </a>
+                      )}
+                      {member.social?.twitter && (
+                        <a 
+                          href={member.social.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`w-10 h-10 border-2 ${color.border} flex items-center justify-center hover:${color.accent} hover:border-transparent transition-all duration-300 group/social`}
+                        >
+                          <span className={`text-xs font-bold ${color.text} group-hover/social:text-cream transition-colors duration-300`}>𝕏</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6 relative">
-                  {/* Name */}
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors duration-300">
-                    {member.name}
-                  </h3>
-                  
-                  {/* Role */}
-                  <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
-                    {member.role}
-                  </p>
-                  
-                  {/* Divider */}
-                  <div className="w-12 h-0.5 bg-primary mb-4 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                  
-                  {/* Bio */}
-                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
-
-                {/* Corner decoration */}
-                <div className="absolute bottom-0 right-0 w-20 h-20 bg-primary/5 rounded-tl-full transform translate-x-10 translate-y-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"></div>
+                {/* Hover Line */}
+                <div className={`absolute bottom-0 left-0 h-1 ${color.line} w-0 group-hover:w-full transition-all duration-700`}></div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg">
-            Want to join our amazing team?
-          </p>
-          <button className="px-8 py-4 bg-secondary text-white rounded-lg font-semibold hover:bg-primary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-            View Open Positions
-          </button>
+        {/* Enhanced Bottom CTA */}
+        <div className="relative mt-32">
+          <div className="absolute inset-0 border-4 border-navy"></div>
+          <div className="absolute -top-6 -right-6 w-32 h-32 border-4 border-gold"></div>
+          
+          <div className="relative bg-navy p-12 md:p-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 border-2 border-gold text-gold text-xs uppercase tracking-widest font-bold">
+                  <BriefcaseIcon className="w-4 h-4" />
+                  Join Our Team
+                </div>
+                <h3 className="text-3xl md:text-4xl font-black text-cream mb-4 leading-tight">
+                  Shape the Future of <span className="text-gold">Technology</span>
+                </h3>
+                <p className="text-cream/80 text-base leading-relaxed mb-6">
+                  We're always looking for talented individuals who are passionate about innovation, excellence, and making a real impact.
+                </p>
+                
+                {/* Benefits */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-center gap-2 text-cream/90 text-sm">
+                    <div className="w-2 h-2 bg-gold"></div>
+                    <span>Competitive Salary</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-cream/90 text-sm">
+                    <div className="w-2 h-2 bg-orange"></div>
+                    <span>Remote Options</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-cream/90 text-sm">
+                    <div className="w-2 h-2 bg-gold"></div>
+                    <span>Learning Budget</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-cream/90 text-sm">
+                    <div className="w-2 h-2 bg-orange"></div>
+                    <span>Health Benefits</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col gap-4">
+                <button className="group relative px-8 py-5 bg-orange text-cream font-bold uppercase tracking-wider transition-all duration-300 hover:bg-gold hover:scale-105 flex items-center justify-center gap-3 overflow-hidden">
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                  <BriefcaseIcon className="w-5 h-5 relative" />
+                  <span className="relative">View Open Positions</span>
+                  <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300 relative" />
+                </button>
+                
+                <button className="group px-8 py-5 bg-transparent text-cream font-bold uppercase tracking-wider border-2 border-cream transition-all duration-300 hover:bg-cream hover:text-navy hover:scale-105 relative overflow-hidden flex items-center justify-center gap-3">
+                  <span className="absolute inset-0 bg-cream scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  <AcademicCapIcon className="w-5 h-5 relative" />
+                  <span className="relative">Internship Program</span>
+                </button>
+                
+                <p className="text-xs text-cream/60 text-center mt-2">
+                  Equal opportunity employer • Diverse & inclusive culture
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

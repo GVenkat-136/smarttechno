@@ -4,36 +4,72 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#fee2e2',
-          100: '#fecaca',
-          200: '#fca5a5',
-          300: '#f87171',
-          400: '#ef4444',
-          500: '#dc2626',
-          600: '#b91c1c',
-          700: '#991b1b',
-          800: '#7f1d1d',
-          900: '#450a0a',
-          DEFAULT: '#dc2626'
+        navy: {
+          light: '#2B5F7F',
+          DEFAULT: '#1A4D6D',
+          dark: '#0D2A3D'
         },
-        secondary: {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
-          DEFAULT: '#000000'
+        cream: {
+          light: '#FFFEF5',
+          DEFAULT: '#F5F3E0',
+          dark: '#E8E5D0'
         },
-        background: '#FFFFFF'
+        gold: {
+          light: '#FFD54F',
+          DEFAULT: '#FFC107',
+          dark: '#FFA000'
+        },
+        orange: {
+          light: '#FF8A50',
+          DEFAULT: '#F26419',
+          dark: '#D94A00'
+        },
+        burgundy: {
+          light: '#8B3A3A',
+          DEFAULT: '#6B1B1B',
+          dark: '#4A0E0E'
+        },
+        background: '#F5F3E0'
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif']
+        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        display: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 6s ease-in-out 2s infinite',
+        'slide-up': 'slideUp 0.8s ease-out',
+        'slide-down': 'slideDown 0.8s ease-out',
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'scale-in': 'scaleIn 0.5s ease-out',
+        'draw-line': 'drawLine 2s ease-out forwards',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '50%': { transform: 'translateY(-20px) rotate(5deg)' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(100px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-100px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0.9)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        drawLine: {
+          '0%': { strokeDashoffset: '1000' },
+          '100%': { strokeDashoffset: '0' },
+        },
       },
       screens: {
         'xs': '475px',
