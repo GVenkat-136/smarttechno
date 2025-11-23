@@ -14,18 +14,7 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(() => {
-    // Check localStorage or system preference
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        return savedTheme === 'dark';
-      }
-      // Check system preference
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-    return false;
-  });
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     // Update document class and localStorage when theme changes
