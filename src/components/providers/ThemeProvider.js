@@ -31,7 +31,7 @@ export const ThemeProvider = ({ children }) => {
     // Update document class and localStorage when theme changes
     if (isDark) {
       document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+      localStorage.setItem('theme', 'light');
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
