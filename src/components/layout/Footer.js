@@ -61,8 +61,8 @@ const Footer = ({ footerData }) => {
     <footer id="footer" className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-black dark:via-gray-900 dark:to-black text-white overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/20 via-purple-600/20 to-blue-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-blue-600/20 via-primary/20 to-purple-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -102,7 +102,7 @@ const Footer = ({ footerData }) => {
                     />
                     <button
                       type="submit"
-                      className="px-6 py-3 bg-gradient-to-r from-primary via-purple-600 to-blue-600 hover:from-blue-600 hover:via-purple-600 hover:to-primary text-white rounded-r-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-900 transform hover:scale-105"
+                      className="px-6 py-3 bg-primary hover:bg-primary-700 text-white rounded-r-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-900 transform hover:scale-105"
                     >
                       <ArrowRightIcon className="w-5 h-5" />
                     </button>
@@ -116,7 +116,7 @@ const Footer = ({ footerData }) => {
               <div key={index} className="lg:col-span-1">
                 <h4 className="text-lg font-bold text-white mb-6 relative inline-block">
                   {section.title}
-                  <span className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-primary via-purple-600 to-blue-600 rounded-full"></span>
+                  <span className="absolute bottom-0 left-0 w-12 h-1 bg-primary rounded-full"></span>
                 </h4>
                 <ul className="space-y-3">
                   {section.links.map((link, linkIndex) => (
@@ -126,7 +126,7 @@ const Footer = ({ footerData }) => {
                         onClick={(e) => handleSmoothScroll(e, link.href)}
                         className="group text-gray-400 hover:text-white transition-all duration-300 text-sm flex items-center"
                       >
-                        <span className="w-0 h-px bg-gradient-to-r from-primary to-purple-600 group-hover:w-4 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                        <span className="w-0 h-px bg-primary group-hover:w-4 mr-0 group-hover:mr-2 transition-all duration-300"></span>
                         {link.text}
                       </a>
                     </li>
@@ -142,7 +142,7 @@ const Footer = ({ footerData }) => {
           <div className="border-t border-gray-800/50 py-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="group flex items-center space-x-4 p-4 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all duration-300 border border-gray-700/30 hover:border-primary/30">
-                <div className="p-3 bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="p-3 bg-primary/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
                   <EnvelopeIcon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -156,24 +156,24 @@ const Footer = ({ footerData }) => {
                 </div>
               </div>
 
-              <div className="group flex items-center space-x-4 p-4 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all duration-300 border border-gray-700/30 hover:border-purple-600/30">
-                <div className="p-3 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                  <PhoneIcon className="w-6 h-6 text-purple-500" />
+              <div className="group flex items-center space-x-4 p-4 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all duration-300 border border-gray-700/30 hover:border-primary/30">
+                <div className="p-3 bg-primary/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                  <PhoneIcon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-1">Phone</p>
                   <a 
                     href={`tel:${footerData.contact.phone}`}
-                    className="text-white hover:text-purple-500 transition-colors duration-300 text-sm font-medium"
+                    className="text-white hover:text-primary transition-colors duration-300 text-sm font-medium"
                   >
                     {footerData.contact.phone}
                   </a>
                 </div>
               </div>
 
-              <div className="group flex items-center space-x-4 p-4 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all duration-300 border border-gray-700/30 hover:border-blue-600/30">
-                <div className="p-3 bg-gradient-to-br from-blue-600/20 to-primary/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                  <MapPinIcon className="w-6 h-6 text-blue-500" />
+              <div className="group flex items-center space-x-4 p-4 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all duration-300 border border-gray-700/30 hover:border-primary/30">
+                <div className="p-3 bg-primary/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                  <MapPinIcon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-1">Address</p>
@@ -182,7 +182,7 @@ const Footer = ({ footerData }) => {
               </div>
 
               <div className="group flex items-center space-x-4 p-4 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-all duration-300 border border-gray-700/30 hover:border-primary/30">
-                <div className="p-3 bg-gradient-to-br from-primary/20 via-purple-600/20 to-blue-600/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="p-3 bg-primary/20 rounded-lg group-hover:scale-110 transition-transform duration-300">
                   <ClockIcon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -211,7 +211,7 @@ const Footer = ({ footerData }) => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group p-3 bg-gray-800/50 hover:bg-gradient-to-r hover:from-primary hover:via-purple-600 hover:to-blue-600 text-gray-300 hover:text-white rounded-xl transition-all duration-300 hover:scale-110 transform border border-gray-700/30 hover:border-primary/50"
+                    className="group p-3 bg-gray-800/50 hover:bg-primary text-gray-300 hover:text-white rounded-xl transition-all duration-300 hover:scale-110 transform border border-gray-700/30 hover:border-primary"
                     aria-label={`Follow us on ${social.platform}`}
                   >
                     <div className="transform group-hover:rotate-12 transition-transform duration-300">

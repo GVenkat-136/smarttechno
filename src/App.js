@@ -13,6 +13,8 @@ import Footer from './components/layout/Footer';
 import HeroSection from './components/sections/HeroSection';
 import ServicesSection from './components/sections/ServicesSection';
 import AboutSection from './components/sections/AboutSection';
+import TeamSection from './components/sections/TeamSection';
+import ContactSection from './components/sections/ContactSection';
 
 // App content component that uses theme context
 const AppContent = () => {
@@ -80,7 +82,7 @@ const AppContent = () => {
                 </p>
                 <button 
                   onClick={() => window.location.reload()}
-                  className="mt-6 px-6 py-3 bg-primary text-white rounded-lg hover:bg-red-700 transition-colors duration-300"
+                  className="mt-6 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-700 hover:shadow-lg transition-all duration-300"
                 >
                   Retry Loading
                 </button>
@@ -103,6 +105,8 @@ const AppContent = () => {
           <HeroSection heroData={data.hero} />
           <ServicesSection servicesData={data.services} />
           <AboutSection aboutData={data.about} />
+          <TeamSection teamData={data.team} />
+          <ContactSection />
         </main>
         <Footer footerData={data.footer} />
       </div>

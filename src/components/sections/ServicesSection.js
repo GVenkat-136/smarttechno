@@ -41,7 +41,7 @@ const ServicesSection = ({ servicesData }) => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Our <span className="bg-gradient-to-r from-primary via-purple-600 to-blue-600 bg-clip-text text-transparent">Services</span>
+            Our <span className="text-primary">Services</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Comprehensive technology solutions designed to transform and elevate your business
@@ -112,7 +112,7 @@ const ServicesSection = ({ servicesData }) => {
                       </div>
 
                       {/* Decorative Line */}
-                      <div className="mt-8 w-20 h-1 bg-gradient-to-r from-primary via-purple-600 to-blue-600 rounded-full"></div>
+                      <div className="mt-8 w-20 h-1 bg-primary rounded-full"></div>
                     </div>
                   </div>
                 </div>

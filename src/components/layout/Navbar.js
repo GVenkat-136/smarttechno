@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { useTheme } from '../providers/ThemeProvider';
-import ThemeToggle from '../ui/ThemeToggle';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { isDark } = useTheme();
 
   // Handle scroll effect for navbar styling
   useEffect(() => {
@@ -23,7 +20,8 @@ const Navbar = () => {
     { name: 'Home', href: '#hero' },
     { name: 'Services', href: '#services' },
     { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#footer' }
+    { name: 'Team', href: '#team' },
+    { name: 'Contact', href: '#contact' }
   ];
 
   // Smooth scroll function
@@ -58,7 +56,7 @@ const Navbar = () => {
             <a 
               href="#hero" 
               onClick={(e) => handleSmoothScroll(e, '#hero')}
-              className="text-2xl font-bold bg-gradient-to-r from-primary via-purple-600 to-blue-600 bg-clip-text text-transparent hover:from-blue-600 hover:via-purple-600 hover:to-primary transition-all duration-300"
+              className="text-2xl font-bold text-primary hover:text-primary-700 transition-all duration-300"
             >
               TechSolutions Pro
             </a>
@@ -72,19 +70,17 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleSmoothScroll(e, link.href)}
-                  className="text-gray-700 dark:text-gray-300 hover:text-white dark:hover:text-white px-4 py-2 text-sm font-semibold transition-all duration-300 relative group rounded-xl hover:bg-gradient-to-r hover:from-primary hover:via-purple-600 hover:to-blue-600"
+                  className="text-gray-700 dark:text-gray-300 hover:text-white dark:hover:text-white px-4 py-2 text-sm font-semibold transition-all duration-300 relative group rounded-lg hover:bg-primary"
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-primary via-purple-600 to-blue-600 rounded-full transition-all duration-300 group-hover:w-3/4"></span>
+                  <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-primary rounded-full transition-all duration-300 group-hover:w-3/4"></span>
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Theme Toggle and Mobile Menu Button */}
+          {/* Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            
             {/* Mobile menu button */}
             <div className="md:hidden">
               <button
@@ -116,7 +112,7 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleSmoothScroll(e, link.href)}
-              className="group text-gray-700 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-primary hover:via-purple-600 hover:to-blue-600 block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-xl transform hover:translate-x-2"
+              className="group text-gray-700 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-primary block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-lg transform hover:translate-x-2"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <span className="flex items-center">

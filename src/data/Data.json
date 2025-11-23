@@ -162,6 +162,36 @@
       }
     ]
   },
+  "team": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "role": "CEO & Founder",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80",
+      "bio": "Visionary leader with 15+ years in tech industry"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Johnson",
+      "role": "CTO",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80",
+      "bio": "Expert in AI and machine learning solutions"
+    },
+    {
+      "id": 3,
+      "name": "Michael Chen",
+      "role": "Lead Developer",
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
+      "bio": "Full-stack developer specializing in cloud architecture"
+    },
+    {
+      "id": 4,
+      "name": "Emily Davis",
+      "role": "Design Director",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80",
+      "bio": "Creative designer with passion for user experience"
+    }
+  ],
   "testimonials": [
     {
       "id": 1,

@@ -59,17 +59,17 @@ const HeroSection = ({ heroData }) => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'brightness(0.7)' }}
+          style={{ filter: 'brightness(0.4)' }}
         >
           <source src="/assets/video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-900/70 to-blue-900/80"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-primary/20 via-purple-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-blue-500/20 via-primary/20 to-purple-500/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* Main Content */}
@@ -91,9 +91,9 @@ const HeroSection = ({ heroData }) => {
               {heroData.features.map((feature, index) => (
                 <div 
                   key={index}
-                  className="flex items-center bg-white/10 backdrop-blur-md rounded-full px-5 py-2.5 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="flex items-center bg-white/10 backdrop-blur-md rounded-full px-5 py-2.5 border border-primary/30 hover:bg-white/20 hover:border-primary/50 transition-all duration-300 group"
                 >
-                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full mr-2 group-hover:scale-125 transition-transform"></div>
                   <span className="text-sm md:text-base font-medium text-white">
                     {feature}
                   </span>
@@ -103,17 +103,17 @@ const HeroSection = ({ heroData }) => {
           )}
 
           {/* Stats Display */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">10+</div>
+          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '600ms' }}>
+            <div className="text-center group">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">10+</div>
               <div className="text-sm text-gray-300">Years Experience</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
+            <div className="text-center group">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">500+</div>
               <div className="text-sm text-gray-300">Projects Completed</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">200+</div>
+            <div className="text-center group">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">200+</div>
               <div className="text-sm text-gray-300">Happy Clients</div>
             </div>
           </div>
